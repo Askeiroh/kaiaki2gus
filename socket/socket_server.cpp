@@ -65,12 +65,16 @@ unsigned int Socket::acceptConnection() {
     return 0;
 }
 
-unsigned int Socket::communicate() {
+unsigned int Socket::sendMessage(string message) {
     // Enviar uma mensagem de teste para o cliente
-    std::string message = "teste";
-    send(Socket::client, message.c_str(), message.length(), 0);
+    std::string sentMessage = message;
+    send(Socket::client, sentMessage.c_str(), sentMessage.length(), 0);
 
-    // Receber uma mensagem do cliente
+    return 0;
+}
+
+unsigned int Socket::receiveMessage(){
+
     char buffer[1024];
     int bytesReceived = recv(Socket::client, buffer, sizeof(buffer), 0);
     if (bytesReceived > 0) {

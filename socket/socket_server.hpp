@@ -14,5 +14,6 @@ class Socket {
     unsigned int startupServer();
     unsigned int stopServer();
     unsigned int acceptConnection();
-    unsigned int communicate();
+    unsigned int sendMessage(string message);
+    unsigned int receiveMessage();
 };

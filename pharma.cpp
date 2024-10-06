@@ -16,7 +16,8 @@ int main(){
     return 1;
   }
 
-  servidorSocket.communicate();
+  servidorSocket.sendMessage("Teste");
+  servidorSocket.receiveMessage();
   servidorSocket.stopServer();
   return 0;
 };
