@@ -54,7 +54,7 @@ unsigned int Socket::acceptConnection() {
         return 1;
     }
 
-    std::string handshake_response = 
+    string handshake_response = 
         "HTTP/1.1 101 Switching Protocols\r\n"
         "Upgrade: websocket\r\n"
         "Connection: Upgrade\r\n"
@@ -67,7 +67,7 @@ unsigned int Socket::acceptConnection() {
 
 unsigned int Socket::sendMessage(string message) {
     // Enviar uma mensagem de teste para o cliente
-    std::string sentMessage = message;
+    string sentMessage = message;
     send(Socket::client, sentMessage.c_str(), sentMessage.length(), 0);
 
     return 0;
