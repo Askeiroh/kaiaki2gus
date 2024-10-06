@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+</head>
+<body>
+    <h1>Cliente</h1>
+    <p id="message">Aguardando conexão...</p>
+
+    <script>
+        let socket = new WebSocket("ws://localhost:8080");
+
+        socket.onopen = function(event) {
+            document.getElementById("message").innerHTML = "Conectado ao servidor";
+            socket.send("Hello world!");
+        };
+        socket.onmessage = function(event) {
+            document.getElementById("message").innerHTML = "Mensagem recebida: " + event.data;
+        };
+        socket.onclose = function(event) {
+            document.getElementById("message").innerHTML = "Closed.";
+        };
+        socket.onerror = function(error) {
+            document.getElementById("message").innerHTML = "Erro: " + error.message;
+        };
+    </script>
+</body>
+</html>
