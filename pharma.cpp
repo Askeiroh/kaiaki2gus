@@ -28,51 +28,51 @@ class Produto{
     string classeRemedio;
     string retemReceita;
 
-  void insertDB(){
-    cout << "Nome:" << endl;
-    cin >> nome;
-    cout << "Tipo Produto: " << endl;
-    cin >> tipoProduto;
-    cout << "Principio: " << endl;
-    cin >> principio;
-    cout << "Forma de administracao: " << endl;
-    cin >> formaAdministracao;
-    cout << "Tipo embalagem: " << endl;
-    cin >> tipoEmbalagem;
-    cout << "Quantidade: " << endl;
-    cin >> quantidade;
-    cout << "Apresentação: " << endl;
-    cin >> apresentacao;
-    cout << "Concentração: " << endl;
-    cin >> concentracao;
-    cout << "Fabricante/Laboratorio: " << endl;
-    cin >> fabricante;
-    cout << "Tipo: " << endl;
-    cin >> tipo;
-    cout << "Uso: " << endl;
-    cin >> uso;
-    cout << "Data de fabricação: " << endl;
-    cin >> dataFabricacao;
-    cout << "Data de vencimento: " << endl;
-    cin >> dataVencimento;
-    cout << "Lote: " << endl;
-    cin >> lote;
-    cout << "Descrição: " << endl;
-    cin >> descricao;
-    cout << "Bula: " << endl;
-    cin >> bula;
-    cout << "Desconto: " << endl;
-    cin >> desconto;
-    cout << "Entrada no sistema: " << endl;
-    cin >> entradaSistema;
-    cout << "Fornecedor: " << endl;
-    cin >> fornecedor;
-    cout << "Classe do remédio: " << endl;
-    cin >> classeRemedio;
-    cout << "Retém receita: " << endl;
-    cin >> retemReceita;
-  }
-  void printProduto(){
+    void insertDB(){
+        cout << "Nome:" << endl;
+        cin >> nome;
+        cout << "Tipo Produto: " << endl;
+        cin >> tipoProduto;
+        cout << "Principio: " << endl;
+        cin >> principio;
+        cout << "Forma de administracao: " << endl;
+        cin >> formaAdministracao;
+        cout << "Tipo embalagem: " << endl;
+        cin >> tipoEmbalagem;
+        cout << "Quantidade: " << endl;
+        cin >> quantidade;
+        cout << "Apresentação: " << endl;
+        cin >> apresentacao;
+        cout << "Concentração: " << endl;
+        cin >> concentracao;
+        cout << "Fabricante/Laboratorio: " << endl;
+        cin >> fabricante;
+        cout << "Tipo: " << endl;
+        cin >> tipo;
+        cout << "Uso: " << endl;
+        cin >> uso;
+        cout << "Data de fabricação: " << endl;
+        cin >> dataFabricacao;
+        cout << "Data de vencimento: " << endl;
+        cin >> dataVencimento;
+        cout << "Lote: " << endl;
+        cin >> lote;
+        cout << "Descrição: " << endl;
+        cin >> descricao;
+        cout << "Bula: " << endl;
+        cin >> bula;
+        cout << "Desconto: " << endl;
+        cin >> desconto;
+        cout << "Entrada no sistema: " << endl;
+        cin >> entradaSistema;
+        cout << "Fornecedor: " << endl;
+        cin >> fornecedor;
+        cout << "Classe do remédio: " << endl;
+        cin >> classeRemedio;
+        cout << "Retém receita: " << endl;
+        cin >> retemReceita;
+    }
+    void printProduto(){
         cout << "\nProduto registrado:" << endl;
         cout << "Nome: " << nome << endl;
         cout << "Tipo Produto: " << tipoProduto << endl;
@@ -95,7 +95,7 @@ class Produto{
         cout << "Fornecedor: " << fornecedor << endl;
         cout << "Classe do Remédio: " << classeRemedio << endl;
         cout << "Retém Receita: " << retemReceita << endl;
-  }
+    }
 };
 
 void registrarProduto(map<string, Produto>& estoque){
@@ -130,7 +130,10 @@ int main(){
     map<string, Produto> db;
 
     while(true){
-        cout << "Escolha opcao\n 1- Registrar produto\n 2- Consultar produto" << endl;
+        cout << "Escolha opcao" << endl 
+        <<  "1- Registrar produto" << endl 
+        << "2- Consultar produto" << endl
+        << "3- Excluir registro" << endl;
         int opcao = 0;
         cin >> opcao;
        switch(opcao){
