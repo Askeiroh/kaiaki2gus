@@ -1,2 +1,5 @@
 # kaiaki2gus
-The kaiaki2gus project is a assignment to the AGT class at UDESC
+- Kaiaki2gus é um sistema de farmácia com banco de dados contendo inserção de dados e remoção, assim como consulta
+- Kaiaki2gus foi escrito em C++
+# Code documentation
+
